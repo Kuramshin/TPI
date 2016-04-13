@@ -247,11 +247,21 @@ a:hover, a:focus {
   text-align: center;
 }
 .direction-row {
-  margin-left: auto !important;
-  margin-right: auto !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+    .direction-link-item {
+    color: #fff !important;
+
 }
 .services_title {
   padding-bottom: 60px;
+color:#fff;
+
+}
+
+.services_title:hover, .direction-link-item:hover  {
+    color:#77DDF4;
 }
 .btn-services {
   background: #fff;
