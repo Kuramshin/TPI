@@ -1,9 +1,17 @@
+/*fonts*/
+
+@font-face {
+    font-family: OpenSans;
+    src: url(../fonts/OpenSans-Regular.ttf);
+}
+
 /*common*/
 
 html {
   width: 100%;
   max-width: 1900px;
   margin: 0;
+    font-family:'OpenSans', sans-serif;
 }
 h1 {
   text-transform: uppercase;
@@ -112,10 +120,18 @@ a:hover, a:focus {
 .dropdown-list-inline {
   margin-top: 20px;
 }
+
+.dropdown-menu-item > a {
+    font-size: 16px;
+    padding: 10px;
+}
+
 .dropdown-menu-item > a:hover, .dropdown-menu-item > a:focus {
   color: white;
+    text-decoration: none !important;
+    border: 1px solid #fff !important;
 }
-.top-menu-link:hover, .top-menu-link:active {
+.top-menu-link:hover, .top-menu-link:active, .dropdown-menu-item-list:hover,  .dropdown-menu-item-list:active {
   border: 1px solid #fff !important;
 }
 .header-inner {
@@ -195,6 +211,10 @@ a:hover, a:focus {
 }
 .news-post-data, .news-img-title {
   color: #C3C1D6;
+}
+
+.news-img-title {
+    margin-top: 5px;
 }
 .news-item-content {
   margin-bottom: 150px;
@@ -576,7 +596,9 @@ textarea.form-control {
   /*display: none !important; */
 }
 .social-media-transport {
-  top: 78px;
+  position: absolute;
+    top: 78px;
+    right: 5%;
 }
 .social-media-item {
   opacity: 0.9;
@@ -710,6 +732,8 @@ textarea.form-control {
   .header-bottom-menu_active {
     font-size: 24px;
   }
+
+
   .navbar-default .navbar-toggle {}
   .navbar-toggle {
     float: left !important;
@@ -744,14 +768,45 @@ textarea.form-control {
     font-size: 15px;
   }
     .social-media-transport {
-        top: 53px;
-        right: 0;
+        top: 64px;
+        right: 14px;
+    }
+    .icon-img {
+
+        width: 30px;
+    }
+
+    .about_us {
+        padding: 5% 0 5% 0;
+    }
+    .about_us_title {
+        margin-top: 15px;
+    }
+
+    .news-item-content {
+        margin-bottom: 60px;
+    }
+
+    .add-more-news {
+        font-size: 18px !important;
+        margin-top: 15px;
+    }
+
+    .row_partner {
+        height: auto;
     }
 }
 
 /* Extra Small Devices, Phones */
 
 @media only screen and (max-width: 480px) {
+    .partners_titile {
+        margin-bottom: 10px;
+    }
+    .partner_link {
+        padding: 0px !important;
+        margin-bottom: 0px !important;
+    }
   .navbar-default .navbar-toggle-custom {
     border-color: #fff !important;
   }
@@ -793,9 +848,13 @@ textarea.form-control {
     width: 65%;
   }
   .social-media {
-    top: 63px;
-    right: 0;
+    top: 68px;
+    right: 15px;
   }
+    .icon-img {
+
+        width: 26px;
+    }
   .news-item {
     margin: 18px 0;
   }
