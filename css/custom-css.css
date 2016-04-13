@@ -735,6 +735,7 @@ textarea.form-control {
 
     padding-top: 15px;
     padding-bottom: 15px;
+      padding-right: 55px;
   }
   .navbar-nav>li>a {
     font-size: 16px !important;
