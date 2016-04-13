@@ -828,11 +828,14 @@ textarea.form-control {
   .project-item-description {
     padding: 5px 5px 0px 5px;
       width: 65%;
+      height: 250px;
+      overflow-y: scroll;
   }
 
     .project-client-name {
         font-size: 14px !important;
         font-weight: 200;
+        margin-top: 15px !important;
     }
 
     .project-scope {
