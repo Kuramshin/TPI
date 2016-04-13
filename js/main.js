@@ -34,22 +34,49 @@ jQuery(document).ready(function() {
 
     jQuery('.header-bottom').toggleClass('header-bottom-menu_active');
   });
-});
 
 
-jQuery(document).ready(function() {
   jQuery('.header-bottom-tr').click(function() {
-
     var chosen_pane = jQuery(this),
         all_panes = jQuery('.header-bottom-tr');
 
-    all_panes.removeClass('active');    
+    all_panes.removeClass('active');
     chosen_pane.addClass('active');
-
-
-
   });
 
+  activatePane();
+
+});
+
+function activatePane() {
+
+  jQuery('.header-bottom-tr').removeClass('active');
+
+  if (window.location.hash == "#sea"){
+    jQuery('.header-bottom-menu-sea-tr').addClass('active');
+  }
+  else if (window.location.hash == "#rail") {
+    jQuery('.header-bottom-menu-rail-tr').addClass('active');
+  }
+  else if (window.location.hash == "#auto") {
+    jQuery('.header-bottom-menu-auto-tr').addClass('active');
+  }
+}
+
+$('.transport-menu-link').click(function(){
+  var el = jQuery(this);
+
+  jQuery('.header-bottom-tr').removeClass('active');
+
+  if ((el).attr('href') === "#sea" ) {
+    jQuery('.header-bottom-menu-sea-tr').addClass('active');
+  }
+  else if ((el).attr('href') === "#rail" ) {
+    jQuery('.header-bottom-menu-rail-tr').addClass('active');
+  }
+  else if ((el).attr('href') === "#auto" ) {
+    jQuery('.header-bottom-menu-auto-tr').addClass('active');
+  }
 });
 
 // smooth scrolling
@@ -61,11 +88,11 @@ Math.easeOutQuad = function(t, b, c, d) {
 
 (function() { // do not mess global space
   var
-    interval, // scroll is being eased
-    mult = 0, // how fast do we scroll
-    dir = 0, // 1 = scroll down, -1 = scroll up
-    steps = 50, // how many steps in animation
-    length = 30; // how long to animate
+      interval, // scroll is being eased
+      mult = 0, // how fast do we scroll
+      dir = 0, // 1 = scroll down, -1 = scroll up
+      steps = 50, // how many steps in animation
+      length = 30; // how long to animate
   function MouseWheelHandler(e) {
     e.preventDefault(); // prevent default browser scroll
     clearInterval(interval); // cancel previous animation
