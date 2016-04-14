@@ -137,6 +137,7 @@ a:hover, a:focus {
 .dropdown-menu-item > a {
   color: white;
   font-size: 18px;
+
 }
 .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
   border: 1px solid white !important;
@@ -147,7 +148,7 @@ a:hover, a:focus {
 }
 
 .dropdown-menu-item > a {
-
+    border:1px solid rgba(255, 255, 255, 0) !important;
     font-size: 16px;
     padding: 10px;
 }
